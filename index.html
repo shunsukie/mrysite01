@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -7,51 +7,52 @@
     <title>Toshiki Yasumura Law Office</title>
     <!-- CSS読み込み -->
     <link href="css/style.css" rel="stylesheet">
-    <!-- jQuery読み込み
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+    <!-- jQuery読み込み-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
     <title>Document</title>
 </head>
 <body>
 
-    <header>
-      <div id="top">
+    <header data-scroll-header>
+      <div id="top" name="top">
             <div id="logo">
-            <h1>安村俊己 法律事務所</h1>
+            <h1><span style="letter-spacing: 2.6pt">安村俊己法律事務所</span></h1>
             </div><!--logo-->
                 <nav>
                 <ul>
-                    <li>HOME</li>
-                    <li>ごあいさつ</li>
-                    <li>対応業務</li>
-                    <li>ご依頼の流れ</li>
-                    <li>アクセス</li>
-                    <li>お問い合わせ</li>
+                    <li><a href="#mainimg" class="scroll">HOME</a></li>
+                    <li><a href="#prof-l" class="scroll">ごあいさつ</a></li>
+                    <li><a href="#corres-l" class="scroll">対応業務</a></li>
+                    <li><a href="#flow" class="scroll">ご依頼の流れ</a></li>
+                    <li><a href="#map-l" class="scroll">アクセス</a></li>
+                    <li><a href="#cont-l" class="scroll">お問い合わせ</a></li>
                 </ul>
               </nav>
         </div><!--top-->
     </header>
+
      <div id="wrap">
 
     <div id="mainimg">
-        <img src="#">
-        <div id="info">
-        <p>TOSHIKI YASUMURA</p>
+     <img src="images/officeb.jpg" id="mainimg" alt="Toshiki Yasumura Law Office">
+     <div id="info">
+      <span><p>TOSHIKI YASUMURA</p>
           <p>LAW OFFICE</p>
           <p>〒160–0004 東京都新宿区四谷1丁目10番地 第二上野ビル33号室</p>
           <p>電話/FAX   TEL: 03-5315-4501  FAX: 03-5315-4502</p>
-        </div><!--info-->
-        <div id="easymap">
-            <img src="#" alt="簡易地図">
-        </div><!--easymap-->
-    </div><!--mainimg-->
 
 
+            <img src="#" alt="簡易地図"></span>
+
+
+      </div><!--info-->
+     </div><!--mainimg-->
 
     <div id="prof">
      <div id="prof-l">
        <div id="prof-lc">
-        <img src="#" alt="安村俊己" width="100px">
+        <img src="images/man.PNG" alt="安村俊己" width="180px">
 
         <p><span style="font-weight: bold; font-size:20px"> 安村俊己</span></p>
         <p><span style="font-weight: bold; font-size:18px">Toshiki Yasumura</span></p>
@@ -139,9 +140,7 @@
        </div><!--flow-->
 
         <div id="secimg">
-        <img src="#">
-        <p>dfibjapif</p>
-        <p>lsdfivgjapsfivp@a</p>
+        <img src="images/meeting.jpg" id="secimg">
         </div><!--secimg-->
 
     <div id="map">
@@ -174,19 +173,21 @@
 
       <div id="cont-r">
        <div id="cont-rc">
-        <p>住所 Address</p><br>
-        <p>〒160–0004 東京都新宿区四谷1丁目10番地 第二上野ビル33号室</p><br>
+        <p>住所 ADDRESS</p>
+        <p>〒160–0004 東京都新宿区四谷1丁目10番地 第二上野ビル33号室</p>
         <p>電話/FAX   TEL: 03-5315-4501  FAX: 03-5315-4502</p>
+        <br>
+        <br>
+        <p>お問合せの内容はこちらにご記入をお願いいたします。</p>
         <form method="post" action="example.cgi">
-
         <p>お名前<br>
         <input type="text" name="name"></p>
         <p><label>電話番号<br>
-        <input type="tel" name="tel" size="12" maxlength="20"></label></p>
+        <input type="tel" name="tel" size="20" maxlength="20"></label></p>
         <p>メールアドレス<br>
         <input type="text" name="email"></p>
         <p>お問い合わせ内容 <br>
-        <textarea name="example" cols="50" rows="10"></textarea>
+        <textarea name="example" cols="35" rows="10"></textarea>
         </p>
         <p><input type="submit" value="送信する"></p>
         </form>
@@ -199,5 +200,26 @@
    <p> fhaofivushdfovushdfovjsdvjinap</p>
    <p>olfvjnzdp;fkbv@adfbdfb</p>
    </footer>
+   <script>
+   $(document).ready(function(){
+
+  // ★　任意のズレ高さピクセル数を入力　↓
+  var headerHight = 60;
+   // #で始まるアンカーをクリックした場合に処理
+   jQuery('a[href^=#]').click(function() {
+    // スクロールの速度
+    var speed = 400; // ミリ秒
+    // アンカーの値取得
+    var href= jQuery(this).attr("href");
+    // 移動先を取得
+    var target = jQuery(href == "#" || href == "" ? 'html' : href);
+    // 移動先を数値で取得
+    var position = target.offset().top-headerHight; // ※　-headerHightでズレの処理
+    // スムーズスクロール
+    jQuery('body,html').animate({scrollTop:position}, speed, 'swing');
+    return false;
+   });
+});
+</script>
 </body>
 </html>
