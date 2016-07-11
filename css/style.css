@@ -10,17 +10,16 @@ body {
     font-size: 17px;
     line-height: 1.6em;
     letter-spacing: 0.9pt
-    color: Navy;
+    color: Black;
 }
 
 header {
     width: 100%;
-    background-color: Ivory;
+    background-color: rgba(255,255,240,0.9);
     position:relative;
-    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
     position: fixed;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
     border-top: 1px LightSteelBlue solid;
-    /*border-bottom: 1px Blue solid;*/
     box-sizing: border-box;
 }
 
@@ -28,7 +27,7 @@ header {
     width:80%;
     margin:0 auto;
     height: auto;
-    background-color: Ivory;
+    background-color: rgba(255,255,240,0.9);
     color: Navy;
 }
 
@@ -37,7 +36,7 @@ header {
     width: 40%;
     padding: 22px 0 15px 45px;
     box-sizing: border-box;
-    background-color: Ivory;
+    background-color: rgba(255,255,240,0.4);
     background-image: url(../images/navysss.png);
     background-repeat: no-repeat;
     background-position: left center;
@@ -46,21 +45,29 @@ header {
 nav ul {
     list-style-type: none;
     display: block;
+
 }
 
 nav li {
     float: left;
-    padding: 25px 10px 0 8px;
+    padding: 22px 0 0 0;
     font-weight: bold;
 }
 
 nav li a {
     text-decoration: none;
-}
+    padding: 8px;
+    color: MidnightBlue;
+    border-left: 2px MistyRose solid;
+    box-sizing: border-box;
+    }
 
 nav li a:hover {
-    background: navy;
+    background: rgba(25,25,112,0.9);
     color: white;
+    text-shadow:1px 1px #555;
+    box-shadow: -1px -1px 1px 0 #555;
+    font-size: 20px;
 }
 
 #mainimg {
