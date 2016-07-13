@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 * {
     margin:0;
     padding:0;
@@ -22,25 +22,40 @@ header {
     border-top: 1px LightSteelBlue solid;
     box-sizing: border-box;
 }
-
 #top {
-    width:80%;
+    width: 1000px;
     margin:0 auto;
     height: auto;
-    background-color: rgba(255,255,240,0.9);
-    color: Navy;
+    color: MidnightBlue;
+    border-left:1px black solid;
+    border-right:1px black solid;
+    margin-top:15px;
+    }
+
+header h1 {
+    letter-spacing: 2.8pt;
+    line-height: 1.6em;
+    display:inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding-left:10px;
+    font-size: 2.25em
 }
 
-#logo {
-    float:left;
-    width: 40%;
-    padding: 22px 0 15px 45px;
-    box-sizing: border-box;
-    background-color: rgba(255,255,240,0.4);
-    background-image: url(../images/navysss.png);
-    background-repeat: no-repeat;
-    background-position: left center;
+header img.logo{
+    vertical-align:middle;
 }
+
+
+
+#logo {
+    margin: 0 auto;
+    text-align: center;
+    padding: ;
+    box-sizing: border-box;
+    /*background-position:left center;*/
+    font-family:"Roboto Slab" , Garamond , "Times New Roman" , "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "HGS明朝E" , "ＭＳ Ｐ明朝" , "MS PMincho" , serif;
+    }
 
 nav ul {
     list-style-type: none;
@@ -49,8 +64,9 @@ nav ul {
 
 nav li {
     float: left;
-    padding: 22px 0 0 0;
+    padding: 35px 0 0 0;
     font-weight: bold;
+    font-size:20px;
 }
 
 nav li a {
@@ -63,9 +79,8 @@ nav li a {
 
 nav li a:hover {
     border-bottom: 2px MidnightBlue solid;
+    font-size:21px;
 }
-
-
 
 #mainimg {
     width: 100%;
@@ -76,13 +91,35 @@ nav li a:hover {
     width: 100%;
 }
 
+#info {
+    width: 40%;
+    height: auto;
+    float: left;
+    box-sizing: border-box;
+    position: absolute;
+    padding-bottom: 12px;
+    bottom: 0px;
+}
+
+#info-c {
+    width: 50%;
+    height: auto;
+    color: white;
+    padding: 0 0 150px 0;
+    text-align: left;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
 #prof{
     width:100%;
     margin: 0 auto;
-    overflow: hidden;
-    background-color: Lavender;
+    background-color: #f8f4e6;
     color: MidnightBlue;
-    }
+    overflow: hidden;
+}
 
 #prof-l {
     width: 40%;
@@ -91,19 +128,22 @@ nav li a:hover {
     float: left;
     overflow: hidden;
     padding-bottom: 12px;
-    border-bottom: 1px navy solid;
+    box-shadow:-25px 6px 4px rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
 }
-
 
 #prof-lc {
     width: 80%;
     height: auto;
     background-color: LightSteelBlue;
     float: right;
-    padding: 40px 0 0 70px;
+    padding: 40px 0 10px 70px;
     box-sizing: border-box;
     text-align: center;
+    }
+
+#prof-lc img {
+    margin-bottom:15px;
 }
 
 #prof-r {
@@ -127,12 +167,30 @@ nav li a:hover {
     box-sizing: border-box;
 }
 
+#prof-rc h2 {
+    border-left:10px #FF9C00 solid;
+    border-bottom: 2px #FF9C00 solid;
+    padding-left: 10px;
+    line-height: 1.2em;
+    letter-spacing: 0.7pt
+}
+
+#prof-rc h3 {
+    border-left:5px #FF9C00 solid;
+    padding-left: 10px;
+    line-height: 1.2em;
+    letter-spacing: 0.7pt
+}
+#prof-rc p {
+    margin-top: 5px;
+}
+
 #corres {
     width: 100%;
     height: auto;
     margin: 0 auto;
     overflow: hidden;
-    background-color: Lavender;
+    background-color:rgba(0,42,138,0.5);
     color: MidnightBlue;
 }
 
@@ -143,8 +201,8 @@ nav li a:hover {
     float: left;
     overflow: hidden;
     padding-bottom: 12px;
-    border-bottom: 1px navy solid;
     box-sizing: border-box;
+    box-shadow:-25px 6px 4px rgba(0, 0, 0, 0.3);
 }
 
 #corres-lc {
@@ -157,10 +215,13 @@ nav li a:hover {
     text-align: center;
 }
 
+#corres-lc h1 {
+    letter-spacing: 1.0pt;
+}
+
 #corres-r {
     width:60%;
     height: auto;
-    background-color: Lavender;
     float: left;
     border-top: 2px LightSteelBlue solid;
     border-left: 2px LightSteelBlue solid;
@@ -170,7 +231,6 @@ nav li a:hover {
 #corres-rc {
     width: 80%;
     height: auto;
-    background-color: Lavender;
     float: left;
     padding: 40px;
     box-sizing: border-box;
@@ -178,7 +238,7 @@ nav li a:hover {
 
 #flow {
     width: 100%;
-    background-color: WhiteSmoke;
+    background-color: #f8f4e6;
     color: MidnightBlue;
     border-top: 2px LightSteelBlue ridge;
     border-bottom: 2px LightSteelBlue ridge;
@@ -189,11 +249,17 @@ nav li a:hover {
     width:80%;
     margin:0 auto;
     height: auto;
-    background-color: WhiteSmoke;
+    background-color: #f8f4e6;
     clear:both;
     padding: 50px 100px;
     box-sizing:border-box ;
     }
+
+#flow-c h3{
+    border-left: 10px #7097FF solid;
+    border-bottom: 2px #7097FF solid;
+    padding-left: 10px;
+}
 
 #secimg {
     width: 100%;
@@ -207,6 +273,8 @@ nav li a:hover {
     width: 100%;
     height: auto;
     margin: 0 auto;
+    background-color: #f8f4e6;
+    overflow: hidden;
 }
 
 #map-l {
@@ -215,7 +283,7 @@ nav li a:hover {
     background-color: BlanchedAlmond;
     float: left;
     padding-bottom: 12px;
-    border-bottom: 1px navy solid;
+    box-shadow:-25px 6px 4px rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
 }
 
@@ -234,6 +302,9 @@ nav li a:hover {
     height: auto;
     background-color: Cornsilk;
     float: left;
+    border-top: 2px BlanchedAlmond solid;
+    border-left: 2px BlanchedAlmond solid;
+    box-sizing: border-box;
 }
 
 #map-rc {
@@ -249,6 +320,8 @@ nav li a:hover {
     width: 100%;
     height: auto;
     margin: 0 auto;
+    background-color: #f8f4e6;
+    overflow: hidden;
 }
 
 #cont-l {
@@ -257,7 +330,7 @@ nav li a:hover {
     background-color: BlanchedAlmond;
     float: left;
     padding-bottom: 12px;
-    border-bottom: 1px Cornsilk solid;
+    box-shadow:-25px 6px 4px rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
 }
 
@@ -276,6 +349,9 @@ nav li a:hover {
     height: auto;
     background-color: Cornsilk;
     float: left;
+    border-top: 2px BlanchedAlmond solid;
+    border-left: 2px BlanchedAlmond solid;
+    box-sizing: border-box;
 }
 
 #cont-rc {
@@ -289,7 +365,17 @@ nav li a:hover {
 
 footer {
     width:100%;
-    height: 100px;
-    background-color: Bisque;
+    height: 50px;
+    background-color: rgba(14,25,49,0.9);
     clear: both;
+    border-top: 2px LightSteelBlue ridge;
+    border-bottom: 2px LightSteelBlue ridge;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    line-height: 45px;
+    font-size:0.8em;
+    letter-spacing: 0.9pt
 }
+
+
