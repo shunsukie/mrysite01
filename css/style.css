@@ -1,4 +1,4 @@
-﻿@charset "utf-8";
+@charset "utf-8";
 * {
     margin:0;
     padding:0;
@@ -21,57 +21,88 @@ header {
     box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
     border-top: 1px LightSteelBlue solid;
     box-sizing: border-box;
+    height:100px;
+    z-index:99;
 }
 #top {
-    width: 1000px;
+    width: 80%;
     margin:0 auto;
     height: auto;
     color: MidnightBlue;
-    border-left:1px black solid;
-    border-right:1px black solid;
-    margin-top:15px;
-    }
-
-header h1 {
-    letter-spacing: 2.8pt;
-    line-height: 1.6em;
-    display:inline-block;
-    text-align: center;
-    vertical-align: middle;
-    padding-left:10px;
-    font-size: 2.25em
+    margin-top:8px;
 }
-
-header img.logo{
-    vertical-align:middle;
-}
-
-
 
 #logo {
-    margin: 0 auto;
+    float: left;
+    width: 35%;
+    margin: 15px 0;
+    box-sizing: border-box;
+    background-image: url(../images/navysss.png);
+    background-repeat: no-repeat;
+    background-position: left center;
     text-align: center;
     padding: ;
     box-sizing: border-box;
-    /*background-position:left center;*/
     font-family:"Roboto Slab" , Garamond , "Times New Roman" , "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "HGS明朝E" , "ＭＳ Ｐ明朝" , "MS PMincho" , serif;
-    }
+  }
 
+  #logo a{
+    text-decoretaion:none;
+    color:MidnightBlue;
+  }
+
+header h1 {
+    letter-spacing: 2.4pt;
+    line-height: 1.2em;
+    float: left;
+    vertical-align: middle;
+    padding-top:15px;
+    padding-left:42px;
+    font-size: 1.8em
+}
+
+nav {
+    float: right;
+    width:65%;
+}
 nav ul {
+    float:right;
+    margin:32px 0 20px 30px;
     list-style-type: none;
-    display: block;
+    text-align: center;
 }
 
 nav li {
     float: left;
-    padding: 35px 0 0 0;
+    text-align: center;
+    padding: 0;
     font-weight: bold;
-    font-size:20px;
+    font-size:18px;
+  /*  display: inline-block;
+    display: inline;
+    zoom: 1;*/
+    margin:0 auto;
+     /*width: 14%;   任意のwidth*/
 }
+/*.fix:after {
+content: ".";
+display: block;
+height:0px;
+clear:both;
+visibility:hidden;
+}
+
+.fix {
+display: inline-block;
+}
+
+/*Hides from IE-mac \*/
+/**html .fix {height: 1%;}
+.fix {display: block;}*/
 
 nav li a {
     text-decoration: none;
-    padding: 8px;
+    padding: 6px;
     color: MidnightBlue;
     border-left: 2px MistyRose solid;
     box-sizing: border-box;
@@ -79,7 +110,7 @@ nav li a {
 
 nav li a:hover {
     border-bottom: 2px MidnightBlue solid;
-    font-size:21px;
+    font-size:19px;
 }
 
 #mainimg {
@@ -91,34 +122,74 @@ nav li a:hover {
     width: 100%;
 }
 
-#info {
-    width: 40%;
-    height: auto;
-    float: left;
-    box-sizing: border-box;
-    position: absolute;
-    padding-bottom: 12px;
-    bottom: 0px;
+#mainimg {
+    position: relative;
 }
+#mainimg > img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
 
 #info-c {
-    width: 50%;
-    height: auto;
-    color: white;
-    padding: 0 0 150px 0;
-    text-align: left;
-    box-sizing: border-box;
     position: absolute;
-    right: 0px;
-    bottom: 0px;
+    top: 30%;
+    left: -1%;
+    -webkit-transform: translate(-20%, -20%);
+    transform: translate(-20%, -20%);
+    color:white;
+    text-align: center;
+    }
+
+#info-c > div {
+        width: 40%;
+        margin: 0 auto;
+        font-size: 1rem;
+    }
+
+
+#info-c img {
+    width:55%;
 }
 
+#info-c h1{
+    /*font-family: 'Average', serif;*/
+/*font-family: 'Cormorant SC', serif;*/
+    font-family: 'Cormorant', serif;
+    font-size:26px;
+    line-height: 1.4em;
+    letter-spacing: 1.7pt;
+    padding-bottom:0px;
+    margin:15px 15px 10px 15px;
+
+}
+
+#info-c p{
+    padding: 0 10px 5px 10px;
+    margin:0 10px 10px 10px;
+    font-size:18px;
+    font-weight: bold;
+    line-height: 1.4em;
+}
+
+/*@media only screen and (max-width: 768px) {
+    #mainimg {
+        overflow: scroll;
+    }
+    #info-c {
+        width: 100%;
+    }
+}
+*/
 #prof{
     width:100%;
     margin: 0 auto;
     background-color: #f8f4e6;
     color: MidnightBlue;
     overflow: hidden;
+    position:relative;
+    /*z-index:90;*/
 }
 
 #prof-l {
@@ -130,6 +201,7 @@ nav li a:hover {
     padding-bottom: 12px;
     box-shadow:-25px 6px 4px rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
+    /*z-index:91;*/
 }
 
 #prof-lc {
@@ -140,10 +212,12 @@ nav li a:hover {
     padding: 40px 0 10px 70px;
     box-sizing: border-box;
     text-align: center;
+    z-index:92;
     }
 
 #prof-lc img {
     margin-bottom:15px;
+    z-index:93;
 }
 
 #prof-r {
@@ -234,6 +308,7 @@ nav li a:hover {
     float: left;
     padding: 40px;
     box-sizing: border-box;
+    color:white;
 }
 
 #flow {
@@ -316,6 +391,17 @@ nav li a:hover {
     box-sizing: border-box;
 }
 
+#map-rc h3 {
+    border-left: 10px #7097FF solid;
+    border-bottom: 2px #7097FF solid;
+    padding-left: 10px;
+}
+
+#map-rc ul{
+    list-style-type:square;
+    padding:10px 0 10px 25px;
+}
+
 #contact {
     width: 100%;
     height: auto;
@@ -363,6 +449,8 @@ nav li a:hover {
     box-sizing: border-box;
 }
 
+
+
 footer {
     width:100%;
     height: 50px;
@@ -377,5 +465,3 @@ footer {
     font-size:0.8em;
     letter-spacing: 0.9pt
 }
-
-
