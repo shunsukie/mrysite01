@@ -28,7 +28,7 @@ header {
     width: 80%;
     margin:0 auto;
     height: auto;
-    color: MidnightBlue;
+    color: Black;
     margin-top:8px;
 }
 
@@ -78,27 +78,9 @@ nav li {
     padding: 0;
     font-weight: bold;
     font-size:18px;
-  /*  display: inline-block;
-    display: inline;
-    zoom: 1;*/
     margin:0 auto;
-     /*width: 14%;   任意のwidth*/
-}
-/*.fix:after {
-content: ".";
-display: block;
-height:0px;
-clear:both;
-visibility:hidden;
 }
 
-.fix {
-display: inline-block;
-}
-
-/*Hides from IE-mac \*/
-/**html .fix {height: 1%;}
-.fix {display: block;}*/
 
 nav li a {
     text-decoration: none;
@@ -114,9 +96,16 @@ nav li a:hover {
 }
 
 #mainimg {
+    background: url(../images/officeb2.png) no-repeat;
+    height:#;
     width: 100%;
     display: block;
-}
+    background-attachment: scroll;
+    background-size:cover;
+    margin:0 auto;
+    padding-top: 57.4%;
+    background-size: contain;
+    }
 
 #wrap {
     width: 100%;
@@ -154,8 +143,6 @@ nav li a:hover {
 }
 
 #info-c h1{
-    /*font-family: 'Average', serif;*/
-/*font-family: 'Cormorant SC', serif;*/
     font-family: 'Cormorant', serif;
     font-size:26px;
     line-height: 1.4em;
@@ -172,16 +159,14 @@ nav li a:hover {
     font-weight: bold;
     line-height: 1.4em;
 }
-
-/*@media only screen and (max-width: 768px) {
-    #mainimg {
-        overflow: scroll;
-    }
-    #info-c {
-        width: 100%;
-    }
+#info-c a{
+    color:#4b0082;
 }
-*/
+
+#info-c a:hover{
+    color:yellow;
+}
+
 #prof{
     width:100%;
     margin: 0 auto;
@@ -311,6 +296,18 @@ nav li a:hover {
     color:white;
 }
 
+#corres-rc ul{
+    list-style-type: square;
+    font-weight: bold;
+    font-size: 18px;
+    color:MidnightBlue;
+    line-height: 1.4em;
+}
+
+#corres-rc li{
+    margin-bottom: 15px;
+}
+
 #flow {
     width: 100%;
     background-color: #f8f4e6;
@@ -401,6 +398,9 @@ nav li a:hover {
     list-style-type:square;
     padding:10px 0 10px 25px;
 }
+#map-rc a:hover{
+    color:darkorange;
+}
 
 #contact {
     width: 100%;
@@ -449,11 +449,19 @@ nav li a:hover {
     box-sizing: border-box;
 }
 
+#qa h3{
+    border-left: 10px #7097FF solid;
+    border-bottom: 2px #7097FF solid;
+    padding-left: 10px;
+}
 
+textarea {
+    resize: both;
+}
 
 footer {
     width:100%;
-    height: 50px;
+    height: 150px;
     background-color: rgba(14,25,49,0.9);
     clear: both;
     border-top: 2px LightSteelBlue ridge;
@@ -464,4 +472,438 @@ footer {
     line-height: 45px;
     font-size:0.8em;
     letter-spacing: 0.9pt
+}
+/*///////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media (max-width: 768px) {
+
+header {
+    width: 100%;
+    background-color: rgba(255,255,240,0.9);
+    position:relative;
+    position: fixed;
+    box-sizing: border-box;
+    height:130px;
+    z-index:99;
+    margin:0;
+    padding:0;
+    display: block;
+}
+
+#logo {
+    float: left;
+    width: 100%;
+    margin:0;
+    padding:0;
+    font-family:"Roboto Slab" , Garamond , "Times New Roman" , "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "HGS明朝E" , "ＭＳ Ｐ明朝" , "MS PMincho" , serif;
+  }
+
+  #logo a{
+    text-decoretaion:none;
+    color:MidnightBlue;
+    margin:0;
+    padding:0;
+  }
+
+header h1 {
+    letter-spacing: 1.0pt;
+    /*line-height: 1.3em;*/
+    float: left;
+    /*vertical-align: middle;*/
+    padding-left:0 0 34px 0;
+    font-size:1.2em;
+    margin:1px;
+    padding:1px 0 0 32px;
+}
+
+nav {
+    float: left;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+nav ul {
+    float:right;
+    list-style-type: none;
+    text-align: center;
+    margin:0;
+    padding:0;
+}
+
+nav li {
+    float: left;
+    text-align: center;
+    padding: 0;
+    font-weight: bold;
+    font-size:15px;
+    margin:0 auto;
+    }
+
+    nav li a {
+    text-decoration: none;
+    padding:0 6px ;
+    padding-right: 6px;
+    color: MidnightBlue;
+    border-left: 1px blue solid;
+    box-sizing: border-box;
+    margin:0;
+    }
+
+nav li a:hover {
+    border-bottom: 1px MidnightBlue solid;
+    font-size:14px;
+    background: MidnightBlue;
+    color:white;
+}
+
+#mainimg {
+    width: auto;
+    display: block;
+    background-image: url(../images/mb.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-attachment: fixed;
+    background-size: cover;
+    margin:0 auto;
+    height: 600PX;
+
+}
+
+#wrap {
+    width: auto;
+}
+
+#info-c {
+    position: relative;
+    top: -50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -13%);
+    transform: translate(-50%,-13%);
+    color:white;
+    text-align: center;
+    }
+
+#info-c > div {
+        width: auto;
+        margin: 0 auto;
+        font-size: 1rem;
+    }
+
+
+#info-c img {
+    width:100%;
+}
+
+#info-c h1{
+    font-family: 'Cormorant', serif;
+    font-size:24px;
+    line-height: 1.4em;
+    letter-spacing: 1.7pt;
+    padding-bottom:0px;
+    margin:15px 15px 10px 15px;
+
+}
+
+#info-c p{
+    padding: 0 10px 5px 10px;
+    margin:0 10px 10px 10px;
+    font-size:18px;
+    font-weight: bold;
+    line-height: 1.4em;
+}
+#info-c a{
+    color:#4b0082;
+}
+
+#info-c a:hover{
+    color:yellow;
+}
+
+#prof{
+    width:100%;
+    margin: 0 auto;
+    background-color: #f8f4e6;
+    color: MidnightBlue;
+    overflow: hidden;
+    position:relative;
+    /*z-index:90;*/
+}
+
+#prof-l {
+    width: 100%;
+    height: auto;
+    background-color: LightSteelBlue;
+    float: left;
+    overflow: hidden;
+    padding:0;
+    margin:0;
+}
+
+#prof-lc {
+    width: 100%;
+    height: auto;
+    background-color: LightSteelBlue;
+    float: right;
+    margin: 70px 0 0 0;
+    padding:0;
+    box-sizing: border-box;
+    text-align: center;
+    z-index:92;
+    }
+
+#prof-lc img {
+    margin-bottom:15px;
+    z-index:93;
+}
+
+#prof-r {
+    width: 100%;
+    height: auto;
+    background-color: FloralWhite;
+    float: left;
+    overflow: hidden;
+    border-top: 2px LightSteelBlue solid;
+    border-left: 2px LightSteelBlue solid;
+    box-sizing: border-box;
+
+}
+
+#prof-rc {
+    width: 100%;
+    height: auto;
+    background-color: FloralWhite;
+    float: left;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+#prof-rc h2 {
+    border-left:10px #FF9C00 solid;
+    border-bottom: 2px #FF9C00 solid;
+    padding-left: 10px;
+    line-height: 1.2em;
+    letter-spacing: 0.7pt
+}
+
+#prof-rc h3 {
+    border-left:5px #FF9C00 solid;
+    padding-left: 10px;
+    line-height: 1.2em;
+    letter-spacing: 0.7pt
+}
+#prof-rc p {
+    margin-top: 5px;
+}
+
+#corres {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color:rgba(0,42,138,0.5);
+    color: MidnightBlue;
+}
+
+#corres-l {
+    width: 100%;
+    height: auto;
+    background-color: LightSteelBlue;
+    float: left;
+    overflow: hidden;
+    }
+
+#corres-lc {
+    width: 100%;
+    height: auto;
+    background-color: LightSteelBlue;
+    float: right;
+    margin: 70px 0 0 0;
+    padding:0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#corres-lc h1 {
+    letter-spacing: 1.0pt;
+}
+
+#corres-r {
+    width:100%;
+    height: auto;
+    float: left;
+}
+
+#corres-rc {
+    width: 100%;
+    height: auto;
+    float: left;
+    padding: 0;
+    color:white;
+}
+
+#corres-rc ul{
+    list-style-type: square;
+    font-weight: bold;
+    font-size: 18px;
+    color:MidnightBlue;
+    line-height: 1.4em;
+}
+
+#corres-rc li{
+    margin-bottom: 15px;
+    padding:15px 15px 10px 40px;
+}
+
+#flow {
+    width: 100%;
+    background-color: #f8f4e6;
+    color: MidnightBlue;
+}
+
+#flow-c {
+    width:100%;
+    margin:0 auto;
+    height: auto;
+    background-color: #f8f4e6;
+    clear:both;
+    padding:70px 0 0 0;
+    box-sizing:border-box ;
+    }
+
+#flow-c h3{
+    border-left: 10px #7097FF solid;
+    border-bottom: 2px #7097FF solid;
+    padding-left: 10px;
+}
+
+#secimg {
+    width: 100%;
+    display: block;
+    height: auto;
+    background-color: gray;
+    clear:both;
+}
+
+#map {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #f8f4e6;
+    overflow: hidden;
+}
+
+#map-l {
+    width: 100%;
+    height: auto;
+    background-color: BlanchedAlmond;
+    float: left;
+}
+
+#map-lc {
+    width: 100%;
+    height: auto;
+    background-color: BlanchedAlmond;
+    float: right;
+    margin: 70px 0 0 0;
+    padding:0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#map-r {
+    width: 100%;
+    height: auto;
+    background-color: Cornsilk;
+    float: left;
+}
+
+#map-rc {
+    width: 100%;
+    height: auto;
+    background-color: Cornsilk;
+    float: left;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#map-rc h3 {
+    border-left: 10px #7097FF solid;
+    border-bottom: 2px #7097FF solid;
+    padding-left: 10px;
+}
+
+#map-rc ul{
+    list-style-type:square;
+    padding:10px 0 10px 25px;
+}
+#map-rc a:hover{
+    color:darkorange;
+}
+
+#contact {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #f8f4e6;
+    overflow: hidden;
+}
+
+#cont-l {
+    width: 100%;
+    height: auto;
+    background-color: BlanchedAlmond;
+    float: left;
+}
+
+#cont-lc {
+    width: 100%;
+    height: auto;
+    background-color: BlanchedAlmond;
+    float: right;
+    margin: 70px 0 0 0;
+    padding:0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#cont-r {
+    width: 100%;
+    height: auto;
+    background-color: Cornsilk;
+    float: left;
+    border-top: 2px BlanchedAlmond solid;
+    border-left: 2px BlanchedAlmond solid;
+    box-sizing: border-box;
+}
+
+#cont-rc {
+    width: 100%;
+    height: auto;
+    background-color: Cornsilk;
+    float: left;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+#qa h3{
+    border-left: 10px #7097FF solid;
+    border-bottom: 2px #7097FF solid;
+    padding-left: 10px;
+}
+textarea {
+    resize: both;
+}
+footer {
+    width:100%;
+    height: 100px;
+    background-color: rgba(14,25,49,0.9);
+    clear: both;
+    border-top: 2px LightSteelBlue ridge;
+    border-bottom: 2px LightSteelBlue ridge;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    line-height: 45px;
+    font-size:0.8em;
+    letter-spacing: 0.9pt
+}
 }
